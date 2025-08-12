@@ -5,7 +5,7 @@ data "azurerm_virtual_network" "main" {
 
 data "azurerm_subnet" "internal" {
   name                 = "internal"
-  virtual_network_name = data.azurerm_network_interface.main.name
+  virtual_network_name = data.azurerm_virtual_network.main.name
   resource_group_name  = data.azurerm_resource_group.example.name
 }
 
